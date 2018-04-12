@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+
+<!--Plantilla de xml para simulacion en chai3d-->
+<!--OBLIGATORIO-->
+<cWorld>      
+   <!--OBLIGATORIO-->
+   	<cCamera viewTransform = "3.0 0.0 0.0;0.0 0.0 0.0;0.0 0.0 1.0" 
+            sphericalReferences = "0.0 0.0 0.0;0.0 0.0 1.0;1.0 0.0 0.0"
+            sphericalDegree = "1.0 65 20"
+         	clippingPlanes = "0.01 100.0"/>
+            
+  	<cDirectionalLight enabled = "true"
+                     direction = "-3.0 0.5 1.0"/>
+
+   	<cSpotLight enabled = "true"
+               direction = "-3.5 -2.0 0.0"
+               localPosition = "3.5 2.0 0.0"
+               angle = "50"
+               shadowMapEnabled = "true"/>
+
+   	<cToolCursor WorkspaceRadius = "1.0"
+   				radius = "0.05"/>
+
+   	<cShapeSphere radius = "0.1" 
+   				  localPosition = "0.0 0.7 0.0"/>
+
+   	<cMultiMesh path = "../resources/models/leica/leica.3ds"
+   				localPosFactor = "-1.0"
+   				scale = "1.0"
+   				rotateEulerAng = "0 0 90"/>
+
+	<cVoxel name = "Voxel verde"
+			min_corner = "-0.75 0.0 -0.75"
+	        max_corner = "0.25 1.0 0.25"
+	        minTextureCoord = "0.0 0.0 0.0"
+	        maxTextureCoord = "1.0, 1.0, 1.0"
+	        imagePath = "?.png"
+	        voxelModelResolution = "28"
+	        quality = "0.5"
+	        flagModelCube = "true"
+	        color = "0 255 0 1"
+	        action = "carve">
+	</cVoxel>
+	<cMaterial stiffness = "200"
+	       			damping = "40"
+	       			useHapticFriction = "true"
+	       			staticFriction = "0.3"
+	       			dynamicFriction = "0.2"
+	       			viscosity = "4"
+	       			color = "0 255 0 1"/>
+</cWorld>

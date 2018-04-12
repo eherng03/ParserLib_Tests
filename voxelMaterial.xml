@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<cWorld>      
+	<cCamera sphericalReferences = "0 0 0;0 0 1;1 0 0"
+	        sphericalDegree = "2.3 60 10"
+	     	clippingPlanes = "0.01 10.0">
+	     	<cDirectionalLight enabled = "true"
+	                direction = "-3.0 0.5 1.0"
+	                ambient = "0.5 0.5 0.5"
+	                difuse = "0.8 0.8 0.8" 
+	                specular = "1.0 1.0 1.0"/>
+	</cCamera>
+
+	<cToolCursor WorkspaceRadius = "1.0"
+			radius = "0.05"
+	      	enableGripperUserSwitch = "true"
+	      	enableDynamicObjects = "true"/>
+
+	<cVoxel name = "Voxel rojo"
+			min_corner = "-0.75 -1 -0.75"
+	       	max_corner = "0.25 0 0.25"
+	      	minTextureCoord = "0.0 0.0 0.0"
+	       	maxTextureCoord = "1.0, 1.0, 1.0"
+	       	voxelModelResolution = "64"
+	       	quality = "0.5"
+	       	flagModelCube = "true"
+	       	color = "255 0 0 1"
+	       	 action = "carve">
+	       	<cMaterial stiffness = "200"
+	       			damping = "40"
+	       			color = "255 0 0 1"/>
+
+	</cVoxel>
+
+	<cVoxel name = "Voxel verde"
+			min_corner = "-0.75 0.0 -0.75"
+	        max_corner = "0.25 1.0 0.25"
+	        minTextureCoord = "0.0 0.0 0.0"
+	        maxTextureCoord = "1.0, 1.0, 1.0"
+	        voxelModelResolution = "28"
+	        quality = "0.5"
+	        flagModelCube = "true"
+	        color = "0 255 0 1"
+	         action = "carve">
+	        <cMaterial stiffness = "200"
+	       			damping = "40"
+	       			color = "0 255 0 1"/>
+	</cVoxel>
+
+</cWorld>
